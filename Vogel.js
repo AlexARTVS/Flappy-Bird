@@ -49,11 +49,13 @@ function Vogel(){
         }
     }
     this.jump = function(){
+        if(playerDied == true) return 1;
         if(this.ySpd > 0){
             this.ySpd = -5;
             s1.play();
         } else {
             this.ySpd -= 5;
+            s1.play();
         }
     }
 }
